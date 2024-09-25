@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movies_app/modules/home/Screens/layout/nav_bar.dart';
 import 'package:movies_app/modules/home/Screens/nav_screens/categories/category_screen.dart';
 import 'package:movies_app/modules/home/Screens/nav_screens/wishlist/wishlist_screen.dart';
-import '../nav_screens/home/home_screen.dart';
+import '../nav_screens/home/presentation/pages/home_screen.dart';
 import '../nav_screens/search/search_screen.dart';
 
 class LayOutScreen extends StatefulWidget {
@@ -16,7 +16,7 @@ class LayOutScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<LayOutScreen> {
   int selectedIndex = 0;
-  var screens = const [
+  var screens = [
     HomeScreen(),
     SearchScreen(),
     CategoryScreen(),
@@ -31,8 +31,8 @@ class _HomeScreenState extends State<LayOutScreen> {
         backgroundColor: Colors.black,
         showUnselectedLabels: true,
         showSelectedLabels: true,
-        unselectedItemColor: Color(0xffC6C6C6),
-        selectedItemColor: Color(0xffFFBB3B),
+        unselectedItemColor: const Color(0xffC6C6C6),
+        selectedItemColor: const Color(0xffFFBB3B),
         onTap: (int value) {
           selectedIndex = value;
           setState(() {});
