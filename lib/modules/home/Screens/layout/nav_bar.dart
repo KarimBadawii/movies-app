@@ -11,6 +11,6 @@ class BottomNavItem extends BottomNavigationBarItem {
             size: 40,
           ),
           label: title,
-          backgroundColor: Color(0xff1A1A1A),
+          backgroundColor: const Color(0xff1A1A1A),
         );
 }
