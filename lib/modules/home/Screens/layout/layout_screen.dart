@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/modules/home/Screens/layout/nav_bar.dart';
-import 'package:movies_app/modules/home/Screens/nav_screens/categories/category_screen.dart';
+import 'package:movies_app/modules/home/Screens/nav_screens/categories/presentation/pages/category_screen.dart';
 import 'package:movies_app/modules/home/Screens/nav_screens/wishlist/wishlist_screen.dart';
 import '../nav_screens/home/presentation/pages/home_screen.dart';
 import '../nav_screens/search/search_screen.dart';
