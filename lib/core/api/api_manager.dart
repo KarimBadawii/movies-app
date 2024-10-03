@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:dio/dio.dart';
 
 class ApiManager {
@@ -16,15 +18,16 @@ class ApiManager {
       {required String endPoint, Map<String, dynamic>? param}) {
     return dio.get(baseUrl + endPoint + apiKey, queryParameters: param);
   }
-
+ 
   Future<Response> getCategories(
       {required String endPoint}) {
     return dio.get(baseUrl+endPoint, queryParameters: {"api_key" : adhamApiKey} );
   }
 
   Future<Response> getCategory(
-      {required String endPoint}) {
-    return dio.get(baseUrl+endPoint, queryParameters: {"api_key" : adhamApiKey} );
+      {required String endPoint, required String categoryId }) {
+    return dio.get(baseUrl+endPoint, queryParameters: {"api_key" : adhamApiKey,"with_genres" : categoryId} );
   }
+
 
 }

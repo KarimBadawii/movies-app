@@ -19,8 +19,8 @@ class CategoriesDSImpl implements CategoriesDs{
   }
 
   @override
-  Future<CategoryModel> getCategory() async{
-    Response response = await apiManager.getCategory(endPoint: EndPoints.category);
+  Future<CategoryModel> getCategory(String categoryId) async{
+    Response response = await apiManager.getCategory(endPoint: EndPoints.category, categoryId: categoryId);
     CategoryModel categoryModel = CategoryModel.fromJson(response.data);
     return categoryModel;
   }

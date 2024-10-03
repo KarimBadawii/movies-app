@@ -10,5 +10,5 @@ class GetCategoryUseCase {
 
   GetCategoryUseCase(this.categoriesRepo);
 
-  Future<CategoryModel> call()=>categoriesRepo.getCategory();
+  Future<CategoryModel> call(String categoryId)=>categoriesRepo.getCategory(categoryId);
 }
