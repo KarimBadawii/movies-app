@@ -10,10 +10,11 @@ part 'category_state.dart';
 
 class CategoryBloc extends Bloc<CategoryEvent, CategoryState> {
   GetCategoryUseCase getCategoryUseCase;
-  CategoryBloc(this.getCategoryUseCase) : super(CategoryInitial()) {
+  String categoryId;
+  CategoryBloc(this.getCategoryUseCase,this.categoryId) : super(CategoryInitial()) {
     on<GetCategoryEvent>((event, emit) async{
       try{
-        var result =await getCategoryUseCase.call();
+        var result =await getCategoryUseCase.call(categoryId);
         emit(state.copyWith(getRequestState: RequestState.success,categoryModel: result));
       }catch(e){
         emit(state.copyWith(

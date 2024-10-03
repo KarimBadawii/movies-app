@@ -16,8 +16,8 @@ class CategoriesRepoImpl implements CategoriesRepo{
   }
 
   @override
-  Future<CategoryModel> getCategory() async {
-    var data = await categoriesDs.getCategory();
+  Future<CategoryModel> getCategory(String categoryId) async {
+    var data = await categoriesDs.getCategory(categoryId);
     return data;
   }
 }

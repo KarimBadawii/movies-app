@@ -5,5 +5,6 @@ abstract class CategoriesDs{
 
   Future<CategoriesModel> getCategories();
 
-  Future<CategoryModel> getCategory();
+  Future<CategoryModel> getCategory(String categoryId);
+
 }
