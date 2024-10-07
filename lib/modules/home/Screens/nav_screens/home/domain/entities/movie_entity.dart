@@ -1,22 +1,23 @@
-class MovieEntity {
-  String? backdropPath;
-  int? id;
-  String? posterPath;
-  String? releaseDate;
-  String? title;
+import 'package:equatable/equatable.dart';
 
-  MovieEntity(
-      {this.backdropPath,
-      this.id,
-      this.posterPath,
-      this.releaseDate,
-      this.title});
+class MovieEntity extends Equatable {
+  final String? backdropPath;
+  final int? id;
+  final String? posterPath;
+  final String? releaseDate;
+  final String? title;
 
-  MovieEntity.fromJson(dynamic json) {
-    backdropPath = json['backdrop_path'];
-    id = json['id'];
-    posterPath = json['poster_path'];
-    releaseDate = json['release_date'];
-    title = json['title'];
-  }
+  const MovieEntity(
+      {required this.backdropPath,
+      required this.id,
+      required this.posterPath,
+      required this.releaseDate,
+      required this.title})
+      : assert(id != null, "id can not be null");
+
+  @override
+  List<Object?> get props => [id, title];
 }
+
+@override
+bool get stringify => true;

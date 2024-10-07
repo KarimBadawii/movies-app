@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomCardWidget extends StatelessWidget {
+  // String posterPath;
   const CustomCardWidget({super.key});
 
   @override
@@ -14,6 +15,9 @@ class CustomCardWidget extends StatelessWidget {
           decoration: BoxDecoration(
             image: const DecorationImage(
                 image: AssetImage("assets/images/Dora.png"), fit: BoxFit.fill),
+            // child: CachedNetworkImage(
+            //   imageUrl: ApiManager.imageUrlOriginal+posterPath,
+            // )
             borderRadius: BorderRadius.circular(6),
           ),
         ),

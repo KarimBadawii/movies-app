@@ -5,11 +5,13 @@ import 'package:movies_app/modules/home/Screens/nav_screens/home/domain/use_case
 import '../entities/movie_entity.dart';
 import '../entities/noparams.dart';
 
-class GetMoviesUseCase extends UseCase<List<MovieEntity>, NoParams> {
+class GetUpcomingUseCase extends UseCase<List<MovieEntity>, NoParams> {
   HomeRepo repo;
-  GetMoviesUseCase(this.repo);
 
+  GetUpcomingUseCase(this.repo);
+
+  @override
   Future<Either<AppError, List<MovieEntity>>> call(NoParams noParams) async {
-    return await repo.getMovies();
+    return await repo.getUpcoming();
   }
 }

@@ -1,7 +1,12 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:movies_app/modules/home/Screens/layout/layout_screen.dart';
+import 'di/get_it.dart' as getIt;
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  unawaited(getIt.init());
+
   runApp(const MyApp());
 }
 

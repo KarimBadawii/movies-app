@@ -35,6 +35,13 @@ dependencies:
   dio: ^5.7.0
   equatable: ^2.0.5
   dartz: ^0.10.1
+  bloc: ^8.1.1
+  flutter_bloc: ^8.1.2
+  cached_network_image: 3.3.1
+  pretty_dio_logger: ^1.4.0
+  carousel_slider: ^4.2.0
+  get_it: ^7.2.0
+  injectable: ^2.1.0
 
 dev_dependencies:
   flutter_test:

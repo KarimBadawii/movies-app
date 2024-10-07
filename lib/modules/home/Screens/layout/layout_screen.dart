@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:movies_app/modules/home/Screens/layout/nav_bar.dart';
 import 'package:movies_app/modules/home/Screens/nav_screens/categories/category_screen.dart';
 import 'package:movies_app/modules/home/Screens/nav_screens/wishlist/wishlist_screen.dart';
-import '../nav_screens/home/presentation/pages/home_screen.dart';
+import '../nav_screens/home/presentation/pages/home_screen_test.dart';
 import '../nav_screens/search/search_screen.dart';
 
 class LayOutScreen extends StatefulWidget {
   const LayOutScreen({super.key});
-
   static const String routeName = "/home";
 
   @override
@@ -16,8 +15,8 @@ class LayOutScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<LayOutScreen> {
   int selectedIndex = 0;
-  var screens = [
-    HomeScreen(),
+  var screens = const [
+    HomeScreenTest(),
     SearchScreen(),
     CategoryScreen(),
     WishListScreen()
@@ -48,11 +47,7 @@ class _HomeScreenState extends State<LayOutScreen> {
           BottomNavItem("assets/images/bookmarks.png", "WISHLIST")
         ],
       ),
-      // body: HomeScreen(),
       body: screens[selectedIndex],
-      // body: Center(
-      //   child: Text("Home",style: TextStyle(color: Colors.white),),
-      // ),
     );
   }
 }
